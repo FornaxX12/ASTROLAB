@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: white;
+    background-image: url(img/pexels-leofallflat-1567069.jpg);
+    background-size: cover;
+
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    padding: 0 5%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header {
+    background-color: #243853;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 50px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: contain;
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+.header h1 {
+    color: white;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+    margin: 30px;
+}
+
+.menu li a:hover {
+    color: #aa2800;
+}
+
+.btn-live {
+    background-color: #aa2801;
+    padding: 0.5rem 1rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-live:hover {
+    background-color: #aa2800;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30vh 0;
+    width: 60%;
+}
+
+.info h1 {
+    font-size: 3rem;
+    margin-bottom: 0;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.info p {
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+}
+
+.btn-guia {
+    background-color: #aa2800;
+    padding: 0.7rem 1.5rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-guia:hover {
+    background-color: #e64a19;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5.5px, 5.5px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5.5px, -5.5px);
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        width: 100%;
+        background-color: #243853;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .menu li {
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .menu li a {
+        font-size: 1.5rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu.active {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
