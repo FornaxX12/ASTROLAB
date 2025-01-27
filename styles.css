@@ -25,7 +25,7 @@ body {
 }
 
 .header {
-  background-color: #041d3d;
+  background-color: #022149;
   padding: 1rem 0;
   display: flex;
   justify-content: space-between;
@@ -76,7 +76,7 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #041d3d;
+  background-color: #243853;
   width: 200px;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -180,7 +180,7 @@ body {
   .menu {
     display: none;
     width: 100%;
-    background-color: #041d3d;
+    background-color: #243853;
     position: absolute;
     top: 60px;
     left: 0;
@@ -209,7 +209,7 @@ body {
 
   .menu.active {
     display: flex;
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
   }
 
@@ -219,12 +219,10 @@ body {
     box-shadow: none;
     justify-self: center;
     margin: 2rem;
-    weig
     
   }
 
   .menu li:hover .submenu {
     display: block;
-    c
   }
 }
