@@ -1,85 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <title>Dropdown Sidebar Menu | Licenciatura em Física</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Boxicons CDN link -->
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
-    <div class="menu-btn">
-        <i class='bx bx-menu'></i>
-    </div>
     <div class="sidebar">
         <div class="logo-details">
-            <img src="https://cdn-icons-png.flaticon.com/512/882/882991.png" width="50" height="50">
-            <span class="logo_name">Licenciatura em Física</span>
+            <i class='bx bx-menu' id="btn"></i>
         </div>
-        <ul class="nav-links">
-            <li class="dropdown">
-                <a href="#">
+        <ul class="nav-list">
+            <li>
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Search...">
+                <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href="">
                     <i class='bx bx-home-alt-2'></i>
-                    <span class="link_name">Home</span>
+                    <span class="links_name">Home</span>
                 </a>
+                <span class="tooltip">Home</span>
             </li>
-
-            <li class="dropdown">
-                <a href="#">
-                    <i class='bx bx-book'></i>
-                    <span class="link_name">Ensino</span>
-                    <i class='bx bx-chevron-down arrow'></i>
-                </a>
-                <ul class="submenu">
-                    <li><a href="#">Corpo Docente</a></li>
-                    <li><a href="#">Matrizes</a></li>
-                    <li><a href="#">Coordenação</a></li>
-                    <li><a href="#">PPC</a></li>
-                    <li><a href="#">Calendário</a></li>
-                    <li><a href="#">Lista de oferta</a></li>
-                </ul>
-            </li>
-
-            <li class="dropdown">
-                <a href="#">
-                    <i class='bx bx-search-alt-2'></i>
-                    <span class="link_name">Pesquisa</span>
-                    <i class='bx bx-chevron-down arrow'></i>
-                </a>
-                <ul class="submenu">
-                    <li><a href="#">Laboratório</a></li>
-                    <li><a href="#">Projetos</a></li>
-                    <li><a href="#">TCCs</a></li>
-                </ul>
-            </li>
-
-            <li class="dropdown">
-                <a href="#">
-                    <i class='bx bx-extension'></i>
-                    <span class="link_name">Extensão</span>
-                    <i class='bx bx-chevron-down arrow'></i>
-                </a>
-                <ul class="submenu">
-                    <li><a href="#">Clube de astronomia</a></li>
-                    <li><a href="#">Show da Física</a></li>
-                </ul>
-            </li>
-
-            <li class="dropdown">
-                <a href="#">
+            <li>
+                <a href="">
                     <i class='bx bx-user'></i>
-                    <span class="link_name">Aluno</span>
-                    <i class='bx bx-chevron-down arrow'></i>
+                    <span class="links_name">Aluno</span>
                 </a>
-                <ul class="submenu">
-                    <li><a href="#">Bolsas</a></li>
-                    <li><a href="#">Auxílios</a></li>
-                    <li><a href="#">Egressos</a></li>
-                </ul>
+                <span class="tooltip">Aluno</span>
+            </li>
+            <li>
+                <a href="">
+                    <i class='bx bx-extension' ></i>
+                    <span class="links_name">Extensão</span>
+                </a>
+                <span class="tooltip">Extensão</span>
+            </li>
+            <li>
+                <a href="">
+                    <i class='bx bx-file-find' ></i>
+                    <span class="links_name">Pesquisa</span>
+                </a>
+                <span class="tooltip">Pesquisa</span>
+            </li>
+            <li>
+                <a href="">
+                    <i class='bx bx-book-alt' ></i>
+                    <span class="links_name">Ensino</span>
+                </a>
+                <span class="tooltip">Ensino</span>
+            </li>
+            <li>
+                <a href="">
+                    <i class='bx bx-cog'></i>
+                    <span class="links_name">Settings</span>
+                </a>
+                <span class="tooltip">Settings</span>
             </li>
         </ul>
     </div>
-    <script src="main.js"></script>
+    <section class="home-section">
+        <div class="text">Licenciatura em Física</div>
+    </section>
 </body>
+
 </html>
