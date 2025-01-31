@@ -2,79 +2,84 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <title>Dropdown Sidebar Menu | Licenciatura em Física</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CDN link -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Licenciatura em Física</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <img src="img/Logo - IFCE.png" alt="Logo IF">
-            </div>
-            <h1>Licenciatura em Física</h1>
-            <nav>
-                <ul class="menu">
-                    <li><a href="#temp">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#sobre">Ensino</a>
-                        <ul class="submenu">
-                            <li><a href="#temp">Corpo docente</a></li>
-                            <li><a href="#temp">Matrizes</a></li>
-                            <li><a href="#temp">Coordenação</a></li>
-                            <li><a href="#temp">PPC</a></li>
-                            <li><a href="#temp">Calendário</a></li>
-                            <li><a href="#temp">Lista de oferta</a></li>
+    <div class="menu-btn">
+        <i class='bx bx-menu'></i>
+    </div>
+    <div class="sidebar">
+        <div class="logo-details">
+            <img src="https://cdn-icons-png.flaticon.com/512/882/882991.png" width="50" height="50">
+            <span class="logo_name">Licenciatura em Física</span>
+        </div>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="#">
+                    <i class='bx bx-home-alt-2'></i>
+                    <span class="link_name">Home</span>
+                </a>
+            </li>
 
-
-                        </ul>
-                    </li>
-                    <li><a href="#temp">Pesquisa</a><ul class="submenu">
-                        <li><a href="#temp">Laboratório</a></li>
-                        <li><a href="#temp">Projetos</a></li>
-                        <li><a href="#temp">TCCs</a></li>
-                    </ul>
-                    </li>
-                    <li><a href="#">Extensão</a>
-                        <ul class="submenu">
-                            <li><a href="#temp">Clube de astronomia</a></li>
-                            <li><a href="#temp">Show da Física</a></li>
-                        </ul>
-                        <li><a href="#temp">Aluno</a> <ul class="submenu">
-                        <li><a href="#temp">Bolsas</a></li>
-                        <li><a href="#temp">Auxílios</a></li>
-                        <li><a href="#temp">Egressos</a></li>   
-                        </ul>
-                        </li>
-                    </li>
-                    <li><a href="#temp" class="btn-live">Live</a></li>
+            <li class="dropdown">
+                <a href="#">
+                    <i class='bx bx-book'></i>
+                    <span class="link_name">Ensino</span>
+                    <i class='bx bx-chevron-down arrow'></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="#">Corpo Docente</a></li>
+                    <li><a href="#">Matrizes</a></li>
+                    <li><a href="#">Coordenação</a></li>
+                    <li><a href="#">PPC</a></li>
+                    <li><a href="#">Calendário</a></li>
+                    <li><a href="#">Lista de oferta</a></li>
                 </ul>
-                <div class="menu-toggle" id="menuToggle">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <main class="main-content">
-        <div class="container">
-            <div class="info">
-                <h1>Licenciatura em Física</h1>
-                <p>Campus Acaraú</p>
-                <a href="#temp" class="btn-guia">Guia</a>
-            </div>
-        </div>
-    </main>
+            </li>
 
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const menu = document.querySelector('.menu');
+            <li class="dropdown">
+                <a href="#">
+                    <i class='bx bx-search-alt-2'></i>
+                    <span class="link_name">Pesquisa</span>
+                    <i class='bx bx-chevron-down arrow'></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="#">Laboratório</a></li>
+                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#">TCCs</a></li>
+                </ul>
+            </li>
 
-        menuToggle.addEventListener('click', () => {
-            menu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-        });
-    </script>
+            <li class="dropdown">
+                <a href="#">
+                    <i class='bx bx-extension'></i>
+                    <span class="link_name">Extensão</span>
+                    <i class='bx bx-chevron-down arrow'></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="#">Clube de astronomia</a></li>
+                    <li><a href="#">Show da Física</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">
+                    <i class='bx bx-user'></i>
+                    <span class="link_name">Aluno</span>
+                    <i class='bx bx-chevron-down arrow'></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="#">Bolsas</a></li>
+                    <li><a href="#">Auxílios</a></li>
+                    <li><a href="#">Egressos</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
