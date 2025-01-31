@@ -251,13 +251,13 @@
     min-height: 100vh;
     top: 0;
     left: 78px;
-    width: calc(100% -78px);
+    width: calc(100% - 78px);
     transition: all 0.5s ease;
 }
 
 .sidebar.open~.home-section {
     left: 250px;
-    width: calc(100%-250px);
+    width: calc(100% - 250px);
 }
 
 .home-section .text {
@@ -266,4 +266,41 @@
     font-size: 25px;
     font-weight: 500;
     margin: 18px;
+}
+.submenu {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+}
+
+.submenu li {
+    padding: 5px 0;
+}
+
+.submenu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    padding: 5px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.submenu a:hover {
+    background: #1d1b31;
+}
+
+/* Ícone da seta do dropdown */
+.dropdown .arrow {
+    margin-left: auto;
+    transition: transform 0.3s;
+}
+
+.dropdown.active .submenu {
+    display: block;
+}
+
+.dropdown.active .arrow {
+    transform: rotate(180deg);
 }
