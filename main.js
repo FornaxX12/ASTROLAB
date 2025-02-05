@@ -6,11 +6,13 @@ let dropdowns = document.querySelectorAll(".dropdown");
 closeBtn.addEventListener("click", () => {
   sidebar.classList.toggle("open");
   menuBtnChange();
+  closeDropdowns();
 });
 
 searchBtn.addEventListener("click", () => {
   sidebar.classList.toggle("open");
   menuBtnChange();
+  closeDropdowns();
 });
 
 function menuBtnChange() {
@@ -33,5 +35,13 @@ dropdowns.forEach(dropdown => {
     dropdown.classList.toggle('active');
   });
 });
+
+function closeDropdowns() {
+  if (!sidebar.classList.contains("open")) {
+    dropdowns.forEach(dropdown => {
+      dropdown.classList.remove('active');
+    });
+  }
+}
 
 menuBtnChange();
