@@ -23,11 +23,14 @@ function menuBtnChange() {
 
 dropdowns.forEach(dropdown => {
   let dropdownToggle = dropdown.querySelector('a');
-  let submenu = dropdown.querySelector('.submenu');
-  
+
   dropdownToggle.addEventListener('click', (e) => {
+    if (!sidebar.classList.contains("open")) {
+      return;
+    }
+
     e.preventDefault();
-    dropdown.classList.toggle('active'); 
+    dropdown.classList.toggle('active');
   });
 });
 
