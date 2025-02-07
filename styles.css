@@ -302,6 +302,7 @@
 
 .submenu a:hover {
     background: #1d1b31;
+    color: black;
 }
 
 .dropdown .arrow {
