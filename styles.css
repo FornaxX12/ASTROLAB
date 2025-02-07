@@ -15,10 +15,12 @@
     padding: 6px 14px;
     z-index: 1;
     transition: all 0.5s ease;
+    overflow-y: auto;
 }
 
 .sidebar.open {
     width: 250px;
+    overflow-y: auto;
 }
 
 .sidebar .logo-details {
@@ -58,7 +60,10 @@
 }
 
 .sidebar:not(.open) .dropdown .arrow {
-    display: none;
+    display: inline-block;
+    font-size: 14px;
+    opacity: 20;
+    transition: transform 0.3s, opacity 0.3s;
 }
 
 .sidebar i {
@@ -272,9 +277,13 @@
     margin: 18px;
 }
 .submenu {
-    display: none;
-    list-style: none;
-    padding-left: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+  
+.dropdown.active .submenu {
+    max-height: 300px;
 }
 
 .submenu li {
@@ -295,10 +304,10 @@
     background: #1d1b31;
 }
 
-/* Ícone da seta do dropdown */
 .dropdown .arrow {
-    margin-left: auto;
-    transition: transform 0.3s;
+    margin-left: auto; 
+    font-size: 18px;
+    transition: transform 0.3s ease;
 }
 
 .dropdown.active .submenu {
@@ -307,4 +316,38 @@
 
 .dropdown.active .arrow {
     transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 70px;
+        padding: 6px 10px;
+        overflow: hidden;
+    }
+
+    .sidebar.open {
+        width: 100%;
+        padding: 6px 14px;
+    }
+
+    .home-section {
+        left: 60px;
+        width: calc(100% - 60px);
+    }
+
+    .sidebar.open ~ .home-section {
+        display: none;
+    }
+    .sidebar .logo-details #btn {
+        position: absolute;
+        top: 25px;
+        left: -5px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .sidebar.open .logo-details #btn {
+        left: auto;
+        right: 20px;
+    }
 }
