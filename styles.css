@@ -16,6 +16,8 @@
     z-index: 1;
     transition: all 0.5s ease;
     overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .sidebar.open {
