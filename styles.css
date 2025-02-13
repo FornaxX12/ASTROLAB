@@ -20,6 +20,10 @@
     -ms-overflow-style: none;
 }
 
+.sidebar::-webkit-scrollbar{
+    display: none;
+}
+
 .sidebar.open {
     width: 250px;
     overflow-y: auto;
